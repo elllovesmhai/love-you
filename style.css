@@ -1,0 +1,72 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #fef6e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Flower Stickers */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.imgur.com/8PlEyGP.png'), /* Flower 1 */
+                    url('https://i.imgur.com/1NW0ZJw.png'), /* Flower 2 */
+                    url('https://i.imgur.com/7sG2uPL.png'); /* Flower 3 */
+  background-size: 120px;
+  background-position: top left, center, bottom right;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Main Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Message */
+#main-message {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  color: white;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button:hover {
+  transform: scale(1.1);
+  background-color: #ff3b3b;
+}
+
+/* Random "I Love You" Messages */
+.random-message {
+  position: absolute;
+  font-size: 1.5em;
+  color: #ff6f61;
+  font-weight: bold;
+  pointer-events: none;
+}
